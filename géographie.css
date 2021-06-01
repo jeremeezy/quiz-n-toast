@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+* {
+    box-sizing:border-box; 
+    outline:none;
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style:none;
+}
+
+.main-content {
+    padding:1rem;
+}
+
+/* Navbar */
+.navbar {  
+    width: 100%;
+    display:flex;
+    align-items:center; 
+    justify-content:space-between;   
+    padding:10px;
+    font-size:1.1rem;
+    background:rgba(0, 0, 0, 0.815);
+    color:white;
+}
+.navbar__links { 
+    display:flex;  
+}
+.navbar__link { 
+    padding:0 10px;
+}
+.navbar__link > a { 
+    color:white;
+    text-decoration:none;
+}
+.burger {
+    display:none;
+}
+.toast{
+    width: 100px;
+}
+
+
+@media screen and (max-width:1000px) {
+  .navbar__links { 
+    display:flex;
+    flex-direction:column;
+    width:0;
+    height:100%;  
+    position:absolute;
+    top:65px;
+    right:0;     
+    background:rgba(0, 0, 0, 0.815);     
+    transform: translateX(110%);
+    transition: all .5s ease-in-out;
+  }
+  .show-nav .navbar__links { 
+    width:100vw;    
+    transform: translateX(0);
+  } 
+  .navbar__link {    
+    transform: translateX(101%);
+    transition: all .5s ease-in-out;
+  }
+  
+  .show-nav .navbar__link  {        
+    transform: translateX(0);    
+  }   
+  .navbar__link > a {
+    display:block;
+    padding:1rem;
+    font-size:1.6rem;
+    color:white;  
+    transition: all .4s ease-in-out;
+  }
+  .navbar__link > a:hover {
+    padding-left:2rem;
+    letter-spacing:5px;
+  }
+  
+  /* Toggle menu */
+  .burger {
+    display:block;
+    position:relative;
+    padding:0;
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+  }
+  .bar {
+    display:block;    
+    width:45px;
+    height:4px;  
+    border-radius:3px;
+    background:rgb(219, 137, 29); 
+    transition: all .5s ease-in-out;   
+  }
+  .bar::before, .bar::after {
+    content:"";
+    width:45px;
+    height:4px;
+    position:absolute; 
+    left:0;  
+    background:white; 
+    border-radius:3px;    
+    transition: all .5s ease-in-out;
+  }
+  .bar::before {
+    transform:translateY(-12px)
+  }
+  .bar::after {
+    transform:translateY(12px)
+  }
+  .show-nav .bar {
+    width:0;
+    background:transparent;    
+  }
+  .show-nav .bar::before {
+    transform:rotate(45deg);
+  }
+  .show-nav .bar::after {
+    transform:rotate(-45deg);
+  }
+  
+  /* Bonus - Animations */
+  .show-nav .first {      
+    transition: all 1s ease-out;
+  } 
+  .show-nav .second {      
+    transition: all 1.1s ease-out;
+  } 
+  .show-nav .third {      
+    transition: all 1.2s ease-out;
+  } 
+  .show-nav .four {      
+    transition: all 1.3s ease-out;
+  } 
+  .show-nav .fifth {      
+    transition: all 1.4s ease-out;
+  }
+}
+
+/*  Medium device - Bonus */
+@media screen and (min-width:1000px) {
+  .navbar__link > a::after {
+    display:block;
+    content:"";
+    width:0;
+    height:1px;
+    background:rgb(243, 163, 16);
+    transition:width .4s;
+  }
+  .navbar__link:hover > a::after {
+    width:100%;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background: #2f3542;
+  color: #dfe4ea;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+#question{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#question img{
+    width: 300px;
+    height: 200px;
+}
+
+span, i {
+    color: #ffa502;
+}
+  
+h3 {
+    color: #ffa502;
+    font-size: 1.5rem;
+  }
+  .container{
+    display: flex;
+    text-align: center;
+    padding: 100px;
+  }
+.container .choices {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 3rem auto 3rem;
+      width: 500px;}
+
+button {
+    flex: 1 0 45%;
+    width: 200px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: .4rem;
+    outline: none;
+    background: #dfe4ea;
+    user-select: none;
+    font-weight: 600;
+}
+
+button:hover {
+    /*background: #ffa502;*/
+    transition: .5s;
+}
+button:active {
+    transform: scale(.9);
+    transition: transform .1s;
+}
+      
+p {
+    font-size: 1.3rem;
+    margin: 0;
+}
+      
+    
+  
+#progress {
+    font-size: 1.3rem;
+    color: #ffa502;
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="géographie.css">
+    <title>Quiz'N'Toast</title>
+</head>
+<body>
+
+    <nav class="navbar " role="navigation">
+        <div class="navbar__logo">
+            <img class="toast" src="img/Quiz_N_Toast.png" alt="toast" srcset="">
+        </div>    
+        <ul class="navbar__links">
+          <li class="navbar__link first"><a href="home.html">Accueil</a></li>
+          <li class="navbar__link second"><a href="culture.html">Culture G</a></li>
+          <li class="navbar__link third"><a href="géographie.html">Géographie</a></li>
+          <li class="navbar__link four"><a href="contact.html">Contact</a></li>
+          
+        </ul>   
+        <button class="burger">
+          <span class="bar"></span>  
+        </button>   
+      </nav>
+    
+
+    <div class="container">
+        <div id="quiz">
+            <h1><span>Géo</span>graphie <i class="fas fa-globe-europe"></i></h1>
+      
+            <h2 id="question"></h2>
+              
+            <h3 id="score"></h3>
+      
+        <div class="choices">
+            <button id="guess0" class="btn">        
+                <p id="choice0"></p>
+            </button>
+      
+            <button id="guess1" class="btn">
+                <p id="choice1"></p>
+            </button>
+                
+            <button id="guess2" class="btn">
+                <p id="choice2"></p>
+            </button>
+                
+            <button id="guess3" class="btn">
+                <p id="choice3"></p>
+            </button>
+        </div>
+      
+            <p id="progress"></p>
+      
+        </div>
+    </div>
+              
+</body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <script src="géographie.js"></script>
+</html>
